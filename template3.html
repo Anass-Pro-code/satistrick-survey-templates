@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f5f5;
+            margin: 0;
+        }
+        .quiz-container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: gray;
+        }
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 20px 0;
+            justify-content: center;
+        }
+        .option {
+            font-size: 24px;
+            background: #fff;
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .option:hover {
+            background: #f0f0f0;
+        }
+        .correct {
+            position: relative;
+        }
+        .tooltip {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffcc00;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: none;
+        }
+        .correct:hover .tooltip {
+            display: block;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #ddd;
+            height: 5px;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background: #ffcc00;
+            transition: 0.3s;
+        }
+        .progress-text {
+            font-size: 12px;
+            color: gray;
+        }
+        .last-row {
+            grid-column: span 3;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <p class="subtitle">Lorem Ipsum is simply dummy text of the printing</p>
+        <h2 class="question">Lorem Ipsum simply dummy text of the?</h2>
+        <div class="options">
+            <button class="option"><img src="images/Angry Face.png" alt="" width="50"></button>
+            <button class="option correct"><img src="images/Star Struck.png" alt="" width="70"><span class="tooltip">Cool</span></button>
+            <button class="option"><img src="images/Neutral Face.png" alt="" width="50"></button>
+            <div class="last-row">
+                <button class="option"><img src="images/Group 1000006354.png" alt="" width="50"></button>
+                <button class="option"><img src="images/Slightly Smiling Face.png" alt="" ></button>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 58%;"></div>
+        </div>
+        <p class="progress-text">7 of 12</p>
+    </div>
+</body>
+</html>
